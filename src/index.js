@@ -1,15 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+// BOOTSTRAP
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 // GLOBAL STYLES
 import './index.css';
+
+// CUSTOM FONTS
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'typeface-lobster';
+import 'typeface-open-sans';
 
 // CUSTOM COMPONENTS
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-// BOOTSTRAP
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
