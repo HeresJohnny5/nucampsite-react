@@ -10,24 +10,29 @@ import Contact from "./ContactComponent";
 
 // CUSTOM JAVASCRIPT
 import { CAMPSITES } from '../shared/campsites';
+import { COMMENTS } from '../shared/comments';
+import { PARTNERS } from '../shared/partners';
+import { PROMOTIONS } from '../shared/promotions';
 
 class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
       campsites: CAMPSITES,
-      selectedCampsite: null
+      comments: COMMENTS,
+      partners: PARTNERS,
+      promotions: PROMOTIONS,
     };
-  }
-
-  onCampsiteSelect(campsiteId) {
-    this.setState({selectedCampsite: campsiteId});
   }
 
   render() {
     const HomePage = () => {
       return (
-        <Home />
+        <Home 
+          campsite={this.state.campsites.filter(campsite => campsite.featured)[0]}
+          promotion={this.state.promotions.filter(promotion => promotion.featured)[0]}
+          partner={this.state.partners.filter(partner => partner.featured)[0]}
+        />
       );
     }
 
