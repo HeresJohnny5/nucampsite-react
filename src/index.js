@@ -3,14 +3,17 @@ import ReactDOM from 'react-dom';
 
 // BOOTSTRAP
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-social/bootstrap-social.css';
 
 // GLOBAL STYLES
 import './index.css';
 
 // CUSTOM FONTS
-import 'bootstrap/dist/css/bootstrap.min.css';
 import 'typeface-lobster';
 import 'typeface-open-sans';
+
+// FONT AWESOME
+import 'font-awesome/css/font-awesome.css';
 
 // CUSTOM COMPONENTS
 import App from './App';
