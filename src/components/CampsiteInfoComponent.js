@@ -15,7 +15,7 @@ const RenderCampsite = campsite => {
   )
 }
 
-const RenderComments = comments => {
+const RenderComments = ({comments}) => {
   if (comments) {
     return (
       <div className="col-md-5 m-1">
@@ -29,7 +29,7 @@ const RenderComments = comments => {
       </div>
     )
   }
-
+  
   return <div />;
 }
 
@@ -39,7 +39,7 @@ const CampsiteInfo = props => {
       <div className="container">
         <div className="row">
           {RenderCampsite(props.campsite)}
-          {RenderComments(props.campsite.comments)}
+          <RenderComments comments={props.comments} />
         </div>
       </div>
     )
