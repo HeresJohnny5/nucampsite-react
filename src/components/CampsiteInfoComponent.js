@@ -1,7 +1,12 @@
 import React from "react";
-import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 
-const RenderCampsite = campsite => {
+// REACTSTRAP DOM
+import { Link } from 'react-router-dom';
+
+// REACTSTRAP COMPONENTS
+import { Card, CardImg, CardText, CardBody, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+
+const RenderCampsite = ({campsite}) => {
   return (
     <div className="col-md-5 m-1">
       <Card>
@@ -38,8 +43,18 @@ const CampsiteInfo = props => {
     return (
       <div className="container">
         <div className="row">
-          {RenderCampsite(props.campsite)}
-          <RenderComments comments={props.comments} />
+          <div className="col">
+            <Breadcrumb>
+              <BreadcrumbItem><Link to="/directory">Directory</Link></BreadcrumbItem>
+              <BreadcrumbItem active>{props.campsite.name}</BreadcrumbItem>
+            </Breadcrumb>
+            <h2>{props.campsite.name}</h2>
+            <hr />
+          </div>
+          <div className="row">
+            <RenderCampsite campsite={props.campsite} />
+            <RenderComments comments={props.comments} />
+          </div>  
         </div>
       </div>
     )

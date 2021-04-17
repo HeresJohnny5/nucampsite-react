@@ -1,4 +1,6 @@
 import React from 'react';
+
+// REACTSTRAP DOM
 import { Link } from 'react-router-dom';
 
 function Footer(props) {

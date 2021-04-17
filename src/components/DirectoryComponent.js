@@ -1,8 +1,10 @@
 import React from 'react';
+
+// REACTSTRAP DOM
 import { Link } from 'react-router-dom';
 
 // REACTSTRAP COMPONENTS
-import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
+import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 
 const RenderDirectoryItem = ({campsite, onClick}) => {
   return (
@@ -29,7 +31,17 @@ const Directory = props => {
   return(
     <div className="container">
       <div className="row">
-        {directory}
+        <div className="col">
+          <Breadcrumb>
+            <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
+            <BreadcrumbItem active>Directory</BreadcrumbItem>
+          </Breadcrumb>
+          <h2>Directory</h2>
+          <hr />
+        </div>
+        <div className="row">
+          {directory}
+        </div>
       </div>
     </div>
   )

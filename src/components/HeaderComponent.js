@@ -1,4 +1,6 @@
 import React, { Component }  from 'react';
+
+// REACTSTRAP DOM
 import { NavLink } from 'react-router-dom';
 
 // REACTSTRAP COMPONENTS: Reactstrap provides Bootstrap Components that have been re-implemented as React Components using JSX with the same styles and functionality as their Bootstrap counterparts
